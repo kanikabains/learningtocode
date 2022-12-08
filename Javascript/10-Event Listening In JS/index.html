@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events</title>
+    <style>
+        #btn{
+            padding:10px 14px;
+           background-color: red;
+            border:2px solid black;
+            font-weight: bold;
+            border-radius: 8px;
+
+        }
+    </style>
+</head>
+<body>
+    <!--Browser events:
+    click
+    cotextmenu
+    mouseover/mouseout
+    mousedown/mouseup
+    mousemove
+
+    submit
+    focus
+    DOMcontentloaded
+    transitionend -->
+
+    <div class="container">
+        <h1>This is heading</h1>
+        <p id ="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi architecto tempora hic alias sed sit voluptas a provident, cum aspernatur error repudiandae voluptatem repellendus nemo eveniet at, possimus veniam et officiis modi commodi. Iure dicta assumenda nostrum at perferendis quae quis nisi placeat, vero dolorem. Non amet delectus accusamus doloribus ea eligendi aut praesentium fugit, facilis quisquam tempora error, sed dicta sequi, alias suscipit porro veniam in laudantium nam corrupti culpa dignissimos saepe? Ea voluptatibus ipsa nulla beatae quod magnam rem, nesciunt doloribus voluptatem quos distinctio inventore maiores doloremque perferendis sit modi debitis sapiente delectus praesentium dignissimos repellendus cumque ab.</p>
+
+    </div>
+   
+    <button id="btn" onclick="togglehide()">Show/Hide</button>
+    <script>
+    function togglehide(){
+    let btn = document.getElementById('btn');
+    let para = document.getElementById('para');
+    if(para.style.display != 'none'){
+    para.style.display= 'none';
+    }
+    else{
+        para.style.display= 'block';
+    }
+}
+    </script>
+</body>
+</html>
