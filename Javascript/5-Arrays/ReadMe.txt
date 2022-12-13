@@ -1,3 +1,0 @@
-Resource used:  https://youtu.be/-oVdqCaL3DQ
-*********************************************
-Learned about  Arrays in JS....
