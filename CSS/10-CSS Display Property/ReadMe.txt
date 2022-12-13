@@ -1,3 +1,0 @@
-Resource used: https://youtu.be/YJtlXrzXXFk
-*******************************************
-learned about CSS Display property.......
