@@ -1,0 +1,67 @@
+﻿@model CollegeWebsiteViewModel
+@{
+	ViewData["Title"] = "College Website";
+}
+<div class="container">
+	<div class="row">
+		<div class="main">
+			<div class="text-center">
+				<h1 class="text-info">Admission Form</h1>
+			</div>
+			<form method="get" asp-action="College" asp-controller="CollegeWeb">
+				<div class="form-group">
+					<label asp-for="Courses"></label>
+					<select class="form-control" asp-for="Courses">
+						<option>Select Your Course</option>
+					</select>
+				</div><br />
+
+				<div class="form-group">
+					<label asp-for="Name"></label>
+					<input type="text" asp-for="Name" placeholder="Enter Your Name.." class="form-control" autocomplete="off" />
+				</div><br />
+
+				<div class="form-group">
+					<label asp-for="Email"></label>
+					<input type="text" asp-for="Email" placeholder="Enter Your Email.." class="form-control" autocomplete="off" />
+				</div><br />
+
+				<div class="form-group">
+					<label asp-for="PhoneNumberExtension"></label>
+					<select id="Courses"class="form-control" asp-for="PhoneNumberExtension">
+						<option> Select Extension</option>
+						<option>+91</option>
+					</select>
+				</div><br />
+
+				<div class="form-group">
+					<label asp-for="PhoneNumber"></label>
+					<input type="text" asp-for="PhoneNumber" placeholder="Enter Your Phone Number.." class="form-control" autocomplete="off" />
+				</div><br />
+
+				<div class="form-group">
+					<label asp-for="City"></label>
+					<input type="text" asp-for="City" placeholder="Enter Your City..." class="form-control" autocomplete="off" />
+				</div><br />
+
+				<div class="form-group">
+					<label asp-for="State"></label>
+					<input type="text" asp-for="State" placeholder="Enter Your State..." class="form-control" autocomplete="off" />
+				</div><br />
+
+				<div class="form-group">
+					<label asp-for="Query"></label>
+					<textarea asp-for="Query" placeholder="Enter Your Query.." class="form-control" autocomplete="off"></textarea>
+				</div><br />
+
+				<div class="form-group">
+                <button type="submit" class="btn btn-sm btn-primary float-right">Contact Us</button>
+				</div>
+			</form>
+
+		</div>
+	</div>
+</div>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/site.js"></script>

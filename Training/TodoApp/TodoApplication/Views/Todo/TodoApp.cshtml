@@ -1,0 +1,36 @@
+﻿@model TodoAppViewModel
+@{
+	ViewData["Title"] = "TodoApp";
+}
+
+<div class="container">
+	<div class="row">
+		<div class="main">
+			<div class="text-center">
+				<h1 class="text-info">Todo App</h1>
+			</div>
+			<form method="post" asp-action="TodoApp" asp-controller="Todo">
+				<div class="form-group">
+					<label asp-for="Title"></label>
+					<input type="text" asp-for="Title" placeholder="Enter Title Here.." class="form-control" autocomplete="off" />
+				</div><br />
+
+				<div class="form-group">
+					<label asp-for="Description"></label>
+					<input type="text" asp-for="Description" placeholder="Enter Description Here.." class="form-control" autocomplete="off" />
+				</div><br />
+
+				<div class="form-group">
+					<label asp-for="Check"></label>
+					<input type="checkBox" asp-for="Check"  />
+				</div><br />
+
+				<div class="form-group">
+					<button type="submit" class="btn btn-sm btn-primary float-right">Submit</button>
+				</div>
+			</form>
+
+		</div>
+	</div>
+</div>
+
