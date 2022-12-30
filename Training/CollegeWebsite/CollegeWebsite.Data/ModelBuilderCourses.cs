@@ -10,7 +10,7 @@ namespace CollegeWebsite.Data
 {
 	public static class ModelBuilderCourses
 	{
-		public static void Seed(this ModelBuilder modelBuilder)
+		public static void Seed(this ModelBuilder modelBuilder, DbSet<College> programmes)
 		{
 			_ = modelBuilder.Entity<Courses>().HasData(
 				new Courses

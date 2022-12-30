@@ -3,6 +3,7 @@ using CollegeWebsite.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CollegeWebsite.Data.Migrations
 {
     [DbContext(typeof(CollegeWebsiteDbContext))]
-    partial class CollegeWebsiteDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221230152507_Seeding Programmes")]
+    partial class SeedingProgrammes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
