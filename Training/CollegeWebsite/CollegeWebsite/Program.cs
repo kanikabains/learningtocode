@@ -8,6 +8,11 @@ builder.Services.AddDbContext<CollegeWebsiteDbContext>(options =>
 {
 	options.UseSqlServer(connectionString);
 });
+var conString = builder.Configuration.GetConnectionString("CaztonConnectionString");
+builder.Services.AddDbContext<ProgrammesDbContext>(options =>
+{
+	options.UseSqlServer(conString);
+});
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

@@ -12,13 +12,13 @@ namespace CollegeWebsite.Entities
 		[Required]
 		public int Id { get; set; }
 
-		[Required, MaxLength(200)] 
+		[Required, MaxLength(100)]
 		public string? Title { get; set; }
 
 		[Required, MaxLength(1000)]
 		public string? Description { get; set; }
 
 		[Required]
-		public string? PictureUrl { get;set; }
+		public string? PicureUrl { get; set; }
 	}
 }

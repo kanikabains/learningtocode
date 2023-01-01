@@ -1,10 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CollegeWebsite.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CollegeWebsite.Entities;
 
 namespace CollegeWebsite.Data
 {
@@ -18,7 +18,7 @@ namespace CollegeWebsite.Data
 					Id = 1,
 					Title = "Engineering & Technology",
 					Description = "B.Tech | M.Tech | P.hD",
-					PictureUrl = "http://cpuh.in/wp-content/uploads/2022/02/engineering.jpg"
+					PicureUrl = "http://cpuh.in/wp-content/uploads/2022/02/engineering.jpg"
 				},
 
 				new Programmes
@@ -26,7 +26,7 @@ namespace CollegeWebsite.Data
 					Id = 2,
 					Title = "Basic & Applied Sciences",
 					Description = "B.Sc. (PCMB) | M.Sc. (PCMB)| P.hD",
-					PictureUrl = "http://cpuh.in/wp-content/uploads/2022/02/science.jpg"
+					PicureUrl = "http://cpuh.in/wp-content/uploads/2022/02/science.jpg"
 				},
 
 				new Programmes
@@ -34,7 +34,7 @@ namespace CollegeWebsite.Data
 					Id = 3,
 					Title = "Business & Management Studies",
 					Description = "B.Com | M.Com | BBA | MBA| P.hD",
-					PictureUrl = "http://cpuh.in/wp-content/uploads/2022/02/management.jpg"
+					PicureUrl = "http://cpuh.in/wp-content/uploads/2022/02/management.jpg"
 				},
 
 				new Programmes
@@ -42,27 +42,9 @@ namespace CollegeWebsite.Data
 					Id = 4,
 					Title = "Computer Science",
 					Description = "BCA I MCA | B.Sc.(IT) | M.Sc.(IT) |DCA | PGDCA",
-					PictureUrl = "http://cpuh.in/wp-content/uploads/2022/03/csaw-18-laptop.png"
-				},
-
-				new Programmes
-				{
-					Id = 5,
-					Title = "Education & Forestry",
-					Description = "B.Ed* | B.Sc. B.Ed* | B.A. B.Ed*| B.Sc. Forestry*",
-					PictureUrl = "http://cpuh.in/wp-content/uploads/2022/03/DJI_0608-1-1024x683.jpg"
-				},
-
-				new Programmes
-				{
-					Id = 6,
-					Title = "Legal Studies & Governance",
-					Description = "BA-LL.B. | LLB * | LL.M. | Ph.D",
-					PictureUrl = "http://cpuh.in/wp-content/uploads/2022/02/legal-study.jpg"
+					PicureUrl = "http://cpuh.in/wp-content/uploads/2022/03/csaw-18-laptop.png"
 				}
-
 				 );
 		}
 	}
 }
-

@@ -8,11 +8,12 @@
 			<div class="text-center">
 				<h1 class="text-info">Admission Form</h1>
 			</div>
-			<form method="get" asp-action="College" asp-controller="CollegeWeb">
+			<form method="post" asp-action="College" asp-controller="CollegeWeb">
 				<div class="form-group">
 					<label asp-for="Courses"></label>
 					<select class="form-control" asp-for="Courses">
 						<option>Select Your Course</option>
+						<option>BscIt</option>
 					</select>
 				</div><br />
 

@@ -2,8 +2,8 @@
 
 namespace CollegeWebsite.Models
 {
-	public class HomeViewModel
-	{
+	public class Programmes
+	{ 
 		[Required, MaxLength(100)]
 		public string? Title { get; set; }
 

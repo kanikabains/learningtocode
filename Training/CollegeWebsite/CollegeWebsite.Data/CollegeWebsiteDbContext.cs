@@ -13,11 +13,8 @@ namespace CollegeWebsite.Data
 		{
 			modelBuilder.Entity<College>(x => x.ToTable("College"));
 			modelBuilder.Entity<Courses>(x => x.ToTable("Courses"));
-			modelBuilder.Seed();
-			modelBuilder.Seed(Programmes);
+			modelBuilder.Seed(Courses);
 		}
 		public DbSet<College> Courses { get; set; }
-
-		public DbSet<College> Programmes { get; set; }
 	}
 }
