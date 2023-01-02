@@ -1,0 +1,40 @@
+﻿@model List<CollegeWebsiteViewModel>
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="container">
+    <div class="row">
+        <div classs="col-8 offset-2">
+            <h1 class="text-center text-primary">Admission Record</h1>
+            <table class="table table-bordered">
+                <tr class="text-center">
+                    <th>Courses</th>
+                    <th>Name</th>
+                    <th>PhoneNumberExtension</th>
+                    <th>PhoneNumber</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Query</th>
+                </tr
+                @foreach(var admissions in Model)
+                {
+                    <tr class="text-center">
+                        <td>@admissions.Courses</td>
+                        <td>@admissions.Name</td>
+                        <td>@admissions.PhoneNumberExtension</td>
+                        <td>@admissions.PhoneNumber</td>
+                        <td>@admissions.City</td>
+                        <td>@admissions.State</td>
+                        <td>@admissions.Query</td>
+                         </tr>
+                }
+            </table>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+

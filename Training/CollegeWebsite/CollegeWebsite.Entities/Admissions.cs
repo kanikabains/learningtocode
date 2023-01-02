@@ -2,7 +2,7 @@
 
 namespace CollegeWebsite.Entities
 {
-	public class College
+	public class Admissions
 	{
 		[Key]
 		public int Id { get; set; }

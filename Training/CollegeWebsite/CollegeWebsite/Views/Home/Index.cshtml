@@ -1,9 +1,25 @@
-﻿@model Programmes
+﻿@model List<ProgrammesModel>
 @{
-	ViewData["Titl"] = "Home Page";
+	ViewData["Title"] = "Home Page";
 }
-	
-	
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/jquery/dist/jquery.js"></script>
-<script src="~/js/home.js"></script>
+
+@if (Model != null && Model.Any())
+{
+	<div class="container">
+		<div class="row">
+			@foreach (var programme in Model)
+			{
+				<div class="col-sm">
+					<div class="card" style="width: 18rem;">
+						<img class="card-img-top" src="@Url.Content(programme.PictureUrl)" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">@programme.Title</h5>
+							<p class="card-text">@programme.Description</p>
+							<a asp-controller="Home" asp-action="Programme" asp-route-url="@programme.Url" class="btn btn-primary">Go somewhere</a>
+						</div>
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+}

@@ -19,6 +19,7 @@ namespace CollegeWebsite.Entities
 		public string? Description { get; set; }
 
 		[Required]
-		public string? PicureUrl { get; set; }
+		public string? PictureUrl { get; set; }
+		public string? Url { get; set; }
 	}
 }

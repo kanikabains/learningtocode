@@ -11,11 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CollegeWebsite.Data.Migrations
 {
     [DbContext(typeof(CollegeWebsiteDbContext))]
-    [Migration("20221229145451_Initial Migration")]
-    partial class InitialMigration
+    [Migration("20230102131631_added url property")]
+    partial class addedurlproperty
     {
         /// <inheritdoc />
-        protected override void BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -24,7 +24,7 @@ namespace CollegeWebsite.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("CollegeWebsite.Entities.College", b =>
+            modelBuilder.Entity("CollegeWebsite.Entities.Admissions", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -69,7 +69,7 @@ namespace CollegeWebsite.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("College", (string)null);
+                    b.ToTable("Admissions", (string)null);
                 });
 
             modelBuilder.Entity("CollegeWebsite.Entities.Courses", b =>
@@ -124,6 +124,70 @@ namespace CollegeWebsite.Data.Migrations
                         {
                             Id = 7,
                             Course = "PhD"
+                        });
+                });
+
+            modelBuilder.Entity("CollegeWebsite.Entities.Programmes", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<string>("PictureUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Url")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Programmes", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "B.Tech | M.Tech | P.hD",
+                            PictureUrl = "~/images/programmes/engineering.jpg",
+                            Title = "Engineering & Technology",
+                            Url = "engineering"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "B.Sc. (PCMB) | M.Sc. (PCMB)| P.hD",
+                            PictureUrl = "~/images/programmes/science.jpg",
+                            Title = "Basic & Applied Sciences",
+                            Url = "science"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "B.Com | M.Com | BBA | MBA| P.hD",
+                            PictureUrl = "~/images/programmes/management.jpg",
+                            Title = "Business & Management Studies",
+                            Url = "management"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Description = "BCA I MCA | B.Sc.(IT) | M.Sc.(IT) |DCA | PGDCA",
+                            PictureUrl = "~/images/programmes/computer.png",
+                            Title = "Computer Science",
+                            Url = "computer-science"
                         });
                 });
 #pragma warning restore 612, 618

@@ -3,6 +3,7 @@ using CollegeWebsite.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CollegeWebsite.Data.Migrations
 {
     [DbContext(typeof(CollegeWebsiteDbContext))]
-    partial class CollegeWebsiteDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230102122214_Initial Migration")]
+    partial class InitialMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,7 +24,7 @@ namespace CollegeWebsite.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("CollegeWebsite.Entities.Admissions", b =>
+            modelBuilder.Entity("CollegeWebsite.Entities.College", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -66,7 +69,7 @@ namespace CollegeWebsite.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Admissions", (string)null);
+                    b.ToTable("College", (string)null);
                 });
 
             modelBuilder.Entity("CollegeWebsite.Entities.Courses", b =>
@@ -137,7 +140,7 @@ namespace CollegeWebsite.Data.Migrations
                         .HasMaxLength(1000)
                         .HasColumnType("nvarchar(1000)");
 
-                    b.Property<string>("PictureUrl")
+                    b.Property<string>("PicureUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -145,9 +148,6 @@ namespace CollegeWebsite.Data.Migrations
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("Url")
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -158,33 +158,29 @@ namespace CollegeWebsite.Data.Migrations
                         {
                             Id = 1,
                             Description = "B.Tech | M.Tech | P.hD",
-                            PictureUrl = "~/images/programmes/engineering.jpg",
-                            Title = "Engineering & Technology",
-                            Url = "engineering"
+                            PicureUrl = "http://cpuh.in/wp-content/uploads/2022/02/engineering.jpg",
+                            Title = "Engineering & Technology"
                         },
                         new
                         {
                             Id = 2,
                             Description = "B.Sc. (PCMB) | M.Sc. (PCMB)| P.hD",
-                            PictureUrl = "~/images/programmes/science.jpg",
-                            Title = "Basic & Applied Sciences",
-                            Url = "science"
+                            PicureUrl = "http://cpuh.in/wp-content/uploads/2022/02/science.jpg",
+                            Title = "Basic & Applied Sciences"
                         },
                         new
                         {
                             Id = 3,
                             Description = "B.Com | M.Com | BBA | MBA| P.hD",
-                            PictureUrl = "~/images/programmes/management.jpg",
-                            Title = "Business & Management Studies",
-                            Url = "management"
+                            PicureUrl = "http://cpuh.in/wp-content/uploads/2022/02/management.jpg",
+                            Title = "Business & Management Studies"
                         },
                         new
                         {
                             Id = 4,
                             Description = "BCA I MCA | B.Sc.(IT) | M.Sc.(IT) |DCA | PGDCA",
-                            PictureUrl = "~/images/programmes/computer.png",
-                            Title = "Computer Science",
-                            Url = "computer-science"
+                            PicureUrl = "http://cpuh.in/wp-content/uploads/2022/03/csaw-18-laptop.png",
+                            Title = "Computer Science"
                         });
                 });
 #pragma warning restore 612, 618

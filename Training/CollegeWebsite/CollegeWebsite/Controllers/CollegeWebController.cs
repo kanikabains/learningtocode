@@ -19,16 +19,16 @@ namespace CollegeWebsite.Controllers
 		[HttpGet]
 		public JsonResult Course()
 		{
-			var Cs = _dbContext.Courses.ToList();
+			var courses = _dbContext.Courses.ToList();
 
-			return Json(Cs);
+			return Json(courses);
 		}
 
 		[HttpPost]
 		public async Task<IActionResult> College(CollegeWebsiteViewModel model)
 		{
 
-			var College = new College
+			var College = new Admissions
 			{
 				Courses = model.Courses,
 				Name = model.Name,
@@ -40,7 +40,7 @@ namespace CollegeWebsite.Controllers
 				Query = model.Query,
 			};
 
-			_dbContext.College.Add(College);
+			_dbContext.Admissions.Add(College);
 			await _dbContext.SaveChangesAsync();
 			return View(model);
 		}
