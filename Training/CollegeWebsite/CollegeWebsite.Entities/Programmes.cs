@@ -20,6 +20,7 @@ namespace CollegeWebsite.Entities
 
 		[Required]
 		public string? PictureUrl { get; set; }
+
 		public string? Url { get; set; }
 	}
 }

@@ -31,12 +31,35 @@ namespace CollegeWebsite.Controllers
 
 			var model = new ProgrammesModel
 			{
-				Description = programme.Description,
-				Title = programme.Title,
+                Title = programme.Title,
+                Description = programme.Description,
 				PictureUrl = programme.PictureUrl
 			};
 			return View(model);
 		}
 
-	}
+		[Route("programmes/engineering")]
+		public IActionResult Engineering() { 
+		      return View();
+		}
+
+        [Route("programmes/science")]
+        public IActionResult Science()
+        {
+            return View();
+        }
+
+        [Route("programmes/management")]
+        public IActionResult Management()
+        {
+            return View();
+        }
+
+        [Route("programmes/computer")]
+        public IActionResult Computer()
+        {
+            return View();
+        }
+
+    }
 }

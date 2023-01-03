@@ -1,3 +1,48 @@
+#services-container {
+    background-color: aliceblue;
+    padding-top: 10px;
+    padding-bottom: 4px;
+}
+
+.main{
+     text-align:center;
+     background-color: aqua;
+}
+#services {
+    margin: 34px;
+    display: flex;
+}
+
+    #services .box {
+        border: 2px solid brown;
+        padding: 34px;
+        margin: 2px 55px;
+        border-radius: 28px;
+        background: #f2f2f2;
+        width:50%;
+    }
+#courses-container {
+    background-color: antiquewhite;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top:40px;
+}
+#courses {
+    margin: 34px;
+    display: flex;
+}
+
+    #courses .box {
+        border: 2px solid brown;
+        padding: 34px;
+        margin: 2px 25px;
+        border-radius: 28px;
+        background: #f2f2f2;
+        margin-bottom: 20px;
+    }
+
+
+
 html {
   font-size: 14px;
 }
